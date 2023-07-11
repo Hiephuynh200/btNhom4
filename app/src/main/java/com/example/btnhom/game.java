@@ -1,16 +1,15 @@
 package com.example.btnhom;
 
-        import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.app.AppCompatActivity;
 
-        import android.content.Intent;
-        import android.os.Bundle;
-        import android.view.View;
-        import android.widget.Button;
-        import android.widget.EditText;
-        import android.widget.TextView;
-        import android.widget.Toast;
+import android.content.Intent;
+import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
+import android.widget.TextView;
+import android.widget.Toast;
 
-        import java.util.Random;
+import java.util.Random;
 
 public class game extends AppCompatActivity {
     int randomNumber;    // Số máy tính phát sinh ngẫu nhiên
@@ -135,9 +134,9 @@ public class game extends AppCompatActivity {
 
                         // Kiem tra so lan doan
                         if (guessCount >= 7) {
-                            txtResult.setText("Ban da thua, so can doan la " + randomStr);
-                            Toast.makeText(getApplicationContext(), "Ban da thua, so can doan la " + randomStr, Toast.LENGTH_SHORT).show();
-                            btnGUess.setEnabled(false); // Khong cho nguoi choi nhap tiep
+                            txtResult.setText("bạn ngu vcl, so can doan la " + randomStr);
+                            Toast.makeText(getApplicationContext(), "bạn ngu vcl, so can doan la " + randomStr, Toast.LENGTH_SHORT).show();
+                          //  btnGUess.setEnabled(false); // Khong cho nguoi choi nhap tiep
                         }
                     }
                 }
@@ -152,14 +151,14 @@ public class game extends AppCompatActivity {
             }
         });
 
-        //return login page
-//        txtReturn.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//                Intent intent = new Intent(game.this,  login.class);
-//                startActivity(intent);
-//            }
-//        });
+      //  return login page
+        txtReturn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(game.this,  login.class);
+                startActivity(intent);
+            }
+        });
     }
 
 }
